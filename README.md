@@ -1,2 +1,5 @@
 # CodingTest_study
-Programmers Lv2. study : 박민성 박민형
+
+Member : 박민성 박민형
+
+Programmers Lv2 (22.06.07 ~ 진행중)
