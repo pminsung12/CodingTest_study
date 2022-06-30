@@ -1,23 +1,28 @@
 from collections import defaultdict
+
+
 def solution(clothes):
     d = defaultdict(int)
     for _, category in clothes:
-        d[category] +=1
-        
+        d[category] += 1
+
     answer = 1
-    for category in d:   
-        answer *= (d[category] + 1) # "안입음" 추가
-    
-	# "모두 안입음" 제외
+    for category in d:
+        answer *= d[category] + 1  # "안입음" 추가
+
+    # "모두 안입음" 제외
     return answer - 1
+
 
 # 숏코드 : Counter + reduce
 # reduce(func, iterable, initializer) : initializer 을 첫번째 값으로 시작
 from collections import Counter
 from functools import reduce
+
+
 def solution(clothes):
     counter = Counter([category for _, category in clothes])
-    answer = reduce(lambda x, y: x*(y+1), counter.values(), 1) - 1
+    answer = reduce(lambda x, y: x * (y + 1), counter.values(), 1) - 1
     return answer
 
 

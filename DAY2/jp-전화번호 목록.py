@@ -7,12 +7,13 @@ def solution(phoneBook):
             return False
     return True
 
+
 # hash 풀이
 def solution(phone_book):
     d = {}
     for phone_number in phone_book:
         d[phone_number] = 1
-		
+
     for number in phone_book:
         prefix = ""
         for s in number:
